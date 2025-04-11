@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Quizzler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEI-8F-7vt">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question will be shown here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szi-g7-XVT">
+                                        <rect key="frame" x="16" y="120" width="361" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dU-zu-Yic">
+                                        <rect key="frame" x="16" y="628" width="361" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="lOg-6T-VOs"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="False">
+                                            <backgroundConfiguration key="background" cornerRadius="12">
+                                                <color key="strokeColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e8K-eC-RVk">
+                                        <rect key="frame" x="16" y="728" width="361" height="4"/>
+                                        <color key="progressTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1C-zI-ihv">
+                                        <rect key="frame" x="16" y="536" width="361" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="cih-1b-Zju"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="True">
+                                            <backgroundConfiguration key="background" cornerRadius="12">
+                                                <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7dU-zu-Yic" firstAttribute="top" secondItem="j1C-zI-ihv" secondAttribute="bottom" constant="32" id="1xp-AY-gbC"/>
+                                    <constraint firstItem="7dU-zu-Yic" firstAttribute="centerX" secondItem="sEI-8F-7vt" secondAttribute="centerX" id="2HQ-dG-wrn"/>
+                                    <constraint firstItem="7dU-zu-Yic" firstAttribute="leading" secondItem="sEI-8F-7vt" secondAttribute="leading" constant="16" id="3QA-zg-mba">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="64"/>
+                                    </constraint>
+                                    <constraint firstItem="e8K-eC-RVk" firstAttribute="leading" secondItem="sEI-8F-7vt" secondAttribute="leading" constant="16" id="8gg-1a-taq">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="64"/>
+                                    </constraint>
+                                    <constraint firstItem="e8K-eC-RVk" firstAttribute="top" secondItem="7dU-zu-Yic" secondAttribute="bottom" constant="40" id="SSK-6T-umm"/>
+                                    <constraint firstItem="Szi-g7-XVT" firstAttribute="leading" secondItem="sEI-8F-7vt" secondAttribute="leading" constant="16" id="TYJ-eg-F92"/>
+                                    <constraint firstItem="j1C-zI-ihv" firstAttribute="centerX" secondItem="sEI-8F-7vt" secondAttribute="centerX" id="Tyn-td-hVo"/>
+                                    <constraint firstAttribute="trailing" secondItem="e8K-eC-RVk" secondAttribute="trailing" constant="16" id="YHA-DY-ASL">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="64"/>
+                                    </constraint>
+                                    <constraint firstItem="j1C-zI-ihv" firstAttribute="leading" secondItem="sEI-8F-7vt" secondAttribute="leading" constant="16" id="k9i-64-LVd">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="64"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="e8K-eC-RVk" secondAttribute="bottom" constant="120" id="m03-tV-2j3">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="32"/>
+                                    </constraint>
+                                    <constraint firstItem="Szi-g7-XVT" firstAttribute="top" secondItem="sEI-8F-7vt" secondAttribute="top" constant="120" id="mNK-nE-lnt">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="64"/>
+                                    </constraint>
+                                    <constraint firstItem="Szi-g7-XVT" firstAttribute="centerX" secondItem="sEI-8F-7vt" secondAttribute="centerX" id="mRG-gM-4mK"/>
+                                    <constraint firstAttribute="trailing" secondItem="7dU-zu-Yic" secondAttribute="trailing" constant="16" id="muB-IA-3fa">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="64"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="j1C-zI-ihv" secondAttribute="trailing" constant="16" id="pmQ-ov-Xh8">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="64"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="Szi-g7-XVT" secondAttribute="trailing" constant="16" id="yP9-JM-98x"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sEI-8F-7vt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6ps-Il-i2f"/>
+                            <constraint firstItem="sEI-8F-7vt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gO3-iy-OKW"/>
+                            <constraint firstAttribute="bottom" secondItem="sEI-8F-7vt" secondAttribute="bottom" id="j3J-Ba-8dY"/>
+                            <constraint firstAttribute="trailing" secondItem="sEI-8F-7vt" secondAttribute="trailing" id="v5B-5b-EPi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
