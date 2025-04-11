@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="MainViewController" customModule="Dicee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="5Au-FH-me3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Eky-mo-XBi">
+                                <rect key="frame" x="62.666666666666629" y="132" width="250" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="FZr-Xv-5vr">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="250" id="Vp5-bb-4Tu">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="150"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="ken-uv-jVS">
+                                <rect key="frame" x="16" y="396" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="2ks-Sa-6IG">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="72"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="128" id="xwj-rV-obA">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="72"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="c2s-La-1sK">
+                                <rect key="frame" x="231" y="396" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="JQ7-75-x9C">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="72"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="128" id="Sjb-ba-ljk">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="72"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="128" id="oGf-Pe-X54">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="72"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW1-Wc-Uov">
+                                <rect key="frame" x="112.66666666666669" y="596" width="150" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="bc2-ef-RGu"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Roll">
+                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.56078433989999998" green="0.1176470518" blue="0.094117648900000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollButtonDidPress:forEvent:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="IOi-5C-slF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eky-mo-XBi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="5eU-nT-4KR"/>
+                            <constraint firstAttribute="trailing" secondItem="5Au-FH-me3" secondAttribute="trailing" id="6is-M2-WWE"/>
+                            <constraint firstItem="UW1-Wc-Uov" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="BEA-fZ-73z"/>
+                            <constraint firstItem="c2s-La-1sK" firstAttribute="top" secondItem="Eky-mo-XBi" secondAttribute="bottom" constant="64" id="BQ0-wD-HlU">
+                                <variation key="heightClass=compact-widthClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="UW1-Wc-Uov" firstAttribute="top" secondItem="ken-uv-jVS" secondAttribute="bottom" constant="72" id="LQz-Zo-OAo">
+                                <variation key="heightClass=compact-widthClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="Eky-mo-XBi" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Mkg-Jr-hJC"/>
+                            <constraint firstAttribute="bottom" secondItem="5Au-FH-me3" secondAttribute="bottom" id="T3v-kj-buj"/>
+                            <constraint firstItem="5Au-FH-me3" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="UQZ-Ww-chO"/>
+                            <constraint firstItem="ken-uv-jVS" firstAttribute="top" secondItem="Eky-mo-XBi" secondAttribute="bottom" constant="64" id="XMd-PJ-r1E">
+                                <variation key="heightClass=compact-widthClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="ken-uv-jVS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="cZW-Km-bXc">
+                                <variation key="heightClass=compact-widthClass=compact" constant="64"/>
+                            </constraint>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c2s-La-1sK" secondAttribute="trailing" constant="16" id="xKv-c2-QH0">
+                                <variation key="heightClass=compact-widthClass=compact" constant="64"/>
+                            </constraint>
+                            <constraint firstItem="5Au-FH-me3" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="zkO-0r-rq2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="diceImage1" destination="ken-uv-jVS" id="kUN-4f-XZv"/>
+                        <outlet property="diceImage2" destination="c2s-La-1sK" id="U4G-pd-soy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice1" width="128" height="128"/>
+        <image name="diceeLogo" width="294" height="192"/>
+        <image name="newbackground" width="666.66668701171875" height="621.33331298828125"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

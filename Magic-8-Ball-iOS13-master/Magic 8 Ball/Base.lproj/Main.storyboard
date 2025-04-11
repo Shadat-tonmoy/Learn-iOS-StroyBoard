@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOL-ar-blH">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQu-pJ-hzj">
+                                        <rect key="frame" x="51.666666666666657" y="120" width="290" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="Ud3-iq-oUf">
+                                        <rect key="frame" x="71.666666666666686" y="216" width="250" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="LTP-PF-CVU">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="150"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="250" id="wiL-yL-dQO">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="200"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlF-j2-5UE">
+                                        <rect key="frame" x="121.66666666666669" y="662" width="150" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Iwl-CK-aSm"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ask" cornerStyle="dynamic">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="40"/>
+                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="askButtonDidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7RZ-FU-YdU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ud3-iq-oUf" firstAttribute="centerX" secondItem="gOL-ar-blH" secondAttribute="centerX" id="P2w-bl-Nec"/>
+                                    <constraint firstItem="tQu-pJ-hzj" firstAttribute="centerX" secondItem="gOL-ar-blH" secondAttribute="centerX" id="SE3-Vv-4hF"/>
+                                    <constraint firstItem="Ud3-iq-oUf" firstAttribute="top" secondItem="tQu-pJ-hzj" secondAttribute="bottom" constant="48" id="Uxj-ut-hjP">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="24"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="RlF-j2-5UE" secondAttribute="bottom" constant="128" id="a74-mt-f8U">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="32"/>
+                                    </constraint>
+                                    <constraint firstItem="RlF-j2-5UE" firstAttribute="centerX" secondItem="gOL-ar-blH" secondAttribute="centerX" id="hEa-EC-Dtq"/>
+                                    <constraint firstItem="tQu-pJ-hzj" firstAttribute="top" secondItem="gOL-ar-blH" secondAttribute="top" constant="120" id="mZL-Hd-PbG">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="32"/>
+                                    </constraint>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gOL-ar-blH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2nn-Qb-iU9"/>
+                            <constraint firstItem="gOL-ar-blH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NuP-4l-TQz"/>
+                            <constraint firstAttribute="bottom" secondItem="gOL-ar-blH" secondAttribute="bottom" id="WAg-OR-ZWd"/>
+                            <constraint firstAttribute="trailing" secondItem="gOL-ar-blH" secondAttribute="trailing" id="zT3-Qy-RSz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ud3-iq-oUf" id="0Jn-eC-s2i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball1" width="305" height="273.66665649414062"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
